@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_170sdp"
+        android:orientation="vertical"
+        android:background="@drawable/background_main">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/boook"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kamus_besar_bahasa_indonesia_online"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_18ssp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp">
+
+        <EditText
+            android:id="@+id/editKata"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="@string/masukan_kata"
+            android:padding="@dimen/_12sdp"
+            android:inputType="text"
+            android:background="@drawable/background_edittext"/>
+
+        <Button
+            android:id="@+id/btnCariKata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:backgroundTint="@color/purple_700"
+            android:text="@string/cari_arti"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tvLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hasil_pencarian"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/purple_700"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tvRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_kata"/>
+
+    </LinearLayout>
+
+</LinearLayout>

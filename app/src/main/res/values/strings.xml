@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KBBI Online</string>
+    <string name="kamus_besar_bahasa_indonesia_online">Kamus Besar Bahasa Indonesia Online</string>
+    <string name="masukan_kata">Masukan kata</string>
+    <string name="cari_arti">Cari Arti</string>
+    <string name="hasil_pencarian">Hasil pencarian:</string>
+</resources>
